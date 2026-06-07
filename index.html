@@ -3,46 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Color Palette Generator</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Random Quote</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
-    <header class="header">
-      <h1>Color Palette Generator</h1>
-      <p class="subtitle">Pick a base color and explore harmonious palettes.</p>
-    </header>
-
-    <section class="controls">
-      <label class="color-picker-label" for="base-color">
-        <span>Base color</span>
-        <input type="color" id="base-color" value="#6366f1" aria-label="Base color">
-        <code id="base-hex" class="hex-display">#6366F1</code>
-      </label>
-
-      <div class="scheme-select">
-        <label for="scheme">Harmony type</label>
-        <select id="scheme" aria-label="Harmony type">
-          <option value="complementary">Complementary</option>
-          <option value="analogous">Analogous</option>
-          <option value="triadic">Triadic</option>
-          <option value="split-complementary">Split complementary</option>
-          <option value="tetradic">Tetradic</option>
-          <option value="monochromatic">Monochromatic</option>
-        </select>
-      </div>
-
-      <button type="button" id="random-btn" class="btn btn-secondary">Random color</button>
-    </section>
-
-    <section class="palette" id="palette" aria-label="Generated color palette"></section>
-
-    <p class="hint">Click a swatch to copy its hex code.</p>
-  </div>
-
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-
-  <script src="js/color-utils.js"></script>
-  <script src="js/app.js"></script>
+  <main class="container">
+    <blockquote id="quote" class="quote" aria-live="polite">
+      Click the button for a random quote.
+    </blockquote>
+    <p id="author" class="author"></p>
+    <button id="quote-btn" type="button">New Quote</button>
+  </main>
+  <script src="quotes.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
